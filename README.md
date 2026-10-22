@@ -69,4 +69,6 @@ Screen IDs from the handoff (A, S, T) are used as route keys and component names
 - `npm test`: 4 money tests pass ($260.00 → $39.00 fee, $221.00 net, 7 × $27.63 + $27.59 releases, $227.50 refund).
 - The 13-step journey above was run end to end in a 390 × 844 browser viewport with the expected numbers at each step.
 - axe-core (WCAG 2.0/2.1/2.2 A and AA rules) reported no violations on every student and teacher screen, the filter sheet and the report sheet.
+- Live site (Oct 22, 2026): 4 requests on first load, all same-origin (HTML, 73 KB JS, 7 KB CSS, 23 KB font); LCP 452 ms and CLS 0.000 measured in a desktop browser at a 390 × 844 viewport without network or CPU throttling. Lighthouse mobile (throttled) has not been run.
+- On the live site: sign-in with a wrong and a correct password, publish, book and pay, and a refresh on a deep route (state restored from localStorage) all passed with no console errors.
 - Not verified on a physical iPhone in this environment: Safari safe areas, keyboard behavior, Add to Home Screen, VoiceOver.
