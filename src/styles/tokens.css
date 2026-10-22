@@ -1,0 +1,116 @@
+/* Design tokens from the handoff PDF, chapter 08 (Light and Dark). Dark is unverified (A-10). */
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/playfair-display-latin-600-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display-latin-700-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/playfair-display-latin-700-italic.woff2') format('woff2');
+}
+
+:root {
+  color-scheme: light dark;
+
+  --bg-primary: #ffffff;
+  --bg-grouped: #f3f4f6;
+  --bg-elevated: #ffffff;
+  --bg-fill: #f3f4f6;
+  --bg-fill-strong: #e5e7eb;
+  --text-primary: #0a0a0a;
+  --text-secondary: #4a5565;
+  --text-tertiary: #626a79;
+  --text-on-tint: #ffffff;
+  --tint-primary: #0a0a0a;
+  --border-default: #e5e7eb;
+  --border-strong: #858a93;
+  --accent-gold: #fdc700;
+  --accent-gold-text: #8a6a00;
+  --accent-gold-bg: #fff8db;
+  --status-success: #1a7f37;
+  --status-success-bg: #dcfce7;
+  --status-warning: #9a5b00;
+  --status-warning-bg: #fff4e0;
+  --status-danger: #c62828;
+  --status-danger-bg: #fdecec;
+  --status-info: #0b63ce;
+  --status-info-bg: #e8f1fd;
+
+  --scrim: rgba(0, 0, 0, 0.3);
+  --glass-hairline: rgba(255, 255, 255, 0.55);
+  --glass-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --page-outside: #d9dce1;
+
+  /* Typography (rem relative to the 17px Dynamic Type root) */
+  --font-ui: -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+
+  /* Spacing scale: 4, 8, 12, 16, 20, 24, 32, 40 */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-22: 22px;
+  --radius-28: 28px;
+  --radius-full: 999px;
+
+  --tabbar-height: 62px;
+  --tabbar-bottom: 26px;
+  --clearance: 140px;
+  --column: 430px;
+
+  --dur-push: 300ms;
+  --dur-sheet: 350ms;
+  --dur-alert: 200ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #000000;
+    --bg-grouped: #000000;
+    --bg-elevated: #1c1c1e;
+    --bg-fill: #2c2c2e;
+    --bg-fill-strong: #3a3a3c;
+    --text-primary: #ffffff;
+    --text-secondary: #aeaeb2;
+    --text-tertiary: #95959b;
+    --text-on-tint: #0a0a0a;
+    --tint-primary: #ffffff;
+    --border-default: #3a3a3c;
+    --border-strong: #8e8e93;
+    --accent-gold-text: #fdc700;
+    --accent-gold-bg: #2b2200;
+    --status-success: #30d158;
+    --status-success-bg: #0e2a18;
+    --status-warning: #ffb340;
+    --status-warning-bg: #33220a;
+    --status-danger: #ff6961;
+    --status-danger-bg: #3a1212;
+    --status-info: #5aa9ff;
+    --status-info-bg: #0b2140;
+    --glass-hairline: rgba(255, 255, 255, 0.12);
+    --page-outside: #111113;
+    --scrim: rgba(0, 0, 0, 0.5);
+  }
+}
