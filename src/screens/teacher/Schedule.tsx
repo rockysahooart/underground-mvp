@@ -824,7 +824,7 @@ export function T18UpdateProgress({ lesson, enr, onClose }: { lesson: Lesson; en
           {assignOpen && (
             <div className="card stack-12">
               <TextField label="Practice" placeholder="e.g. G to C changes" value={title} onChange={setTitle} />
-              <div className="hstack" style={{ gap: 12, alignItems: 'flex-start' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)', gap: 12, alignItems: 'start' }}>
                 <TextField label="Minutes a day" inputMode="numeric" value={mins} onChange={(v) => setMins(v.replace(/\D/g, ''))} />
                 <TextField label="Days a week" inputMode="numeric" value={days} onChange={(v) => setDays(v.replace(/\D/g, '').slice(0, 1))} />
               </div>
